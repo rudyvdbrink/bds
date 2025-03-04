@@ -1,0 +1,130 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: teal;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px; /* Optional: Set a max width for larger screens */
+    position: relative;
+}
+
+.center-column {
+    width: 100%;
+    background-color: #fff;    
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 60px; /* Adjust based on the height of the banner and navbar */
+    margin-bottom: 40px; /* Fixed bottom margin */
+    position: relative; /* Ensure relative positioning for absolute child */
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box; /* Include padding within the width */
+}
+
+#banner {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px; /* Match the max-width of the wrapper */
+    height: 80px; /* Adjust height as needed */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f8f8f8; /* Off-white color */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding within the width */
+}
+
+#banner img {
+    height: 100%;
+    padding-left: 5%;
+}
+
+/* Home section image styling */
+.home-image {
+    float: right;
+    margin-left: 0px;
+    width: 200px; /* Adjust width as needed */
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+nav a:hover, nav a.active {
+    background-color: blue;
+    color: white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+/* section formatting */
+#home {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-size: 20px;
+    color: #777;
+}
+
+#portfolio {
+    padding-top: 10%;
+    padding-bottom: 50%;
+    font-size: 24px;
+    color: #777;
+}
+
+#contact {
+    padding-top: 10%;
+    padding-bottom: 50%;
+    font-size: 24px;
+    color: #777;
+}
+
+#pricing {
+    padding-top: 10%;
+    padding-bottom: 50%;
+    font-size: 24px;
+    color: #777;
+}
+
+/* Project alignment styles */
+.project {
+    margin: 20px 0;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.left-align {
+    text-align: left;
+}
+
