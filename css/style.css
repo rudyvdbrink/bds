@@ -57,14 +57,24 @@ a {
 /* Home section image styling */
 .home-image {
     float: right;
-    margin-left: 0px;
-    width: 200px; /* Adjust width as needed */
+    margin-left: 10px;
+    margin-top: 30px;
+    width: 150px; /* Adjust width as needed */
+    height: auto;
+}
+
+.home-brain {
+    float: left;
+    margin-right: 10px;
+    margin-top: 80px;
+    width: 150px; /* Adjust width as needed */
     height: auto;
 }
 
 nav {
     display: flex;
     align-items: center;
+    padding-right: 4%;
 }
 
 nav a {
@@ -88,8 +98,8 @@ hr {
 
 /* section formatting */
 #home {
-    padding-top: 10%;
-    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 0%;
     font-size: 20px;
     color: #777;
 }
@@ -128,3 +138,29 @@ hr {
     text-align: left;
 }
 
+
+/* Info box styling */
+.info-box-1 {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%; /* Adjust the width as needed */
+    line-height: 1.5;
+}
+
+.info-box-2 {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;    
+    margin-left: auto; /* Align to the right */
+    line-height: 1.5;
+}
