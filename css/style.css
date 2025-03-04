@@ -9,7 +9,7 @@ body {
 
 a {
     text-decoration: none;
-    color: teal;
+    color: rgb(60, 136, 168);
 }
 
 .wrapper {
@@ -41,7 +41,7 @@ a {
     height: 80px; /* Adjust height as needed */
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #f8f8f8; /* Off-white color */
+    background-color: rgba(60, 136, 168, 1); 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,7 +85,7 @@ nav a {
 }
 
 nav a:hover, nav a.active {
-    background-color: blue;
+    background-color: rgba(230, 119, 72, 1);
     color: white;
 }
 
@@ -99,7 +99,7 @@ hr {
 /* section formatting */
 #home {
     padding-top: 5%;
-    padding-bottom: 0%;
+    padding-bottom: 10%;
     font-size: 20px;
     color: #777;
 }
@@ -163,4 +163,27 @@ hr {
     max-width: 80%;    
     margin-left: auto; /* Align to the right */
     line-height: 1.5;
+}
+
+/* Custom bullet points */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 20px; /* Add padding to align with custom bullets */
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px; /* Space for custom bullet */
+}
+
+ul li::before {
+    content: '■'; /* Unicode for a small square */
+    position: absolute;
+    left: 0;
+    color: rgba(60, 136, 168, 1); /* Match the banner color */
+}
+    
+/* Highlight styling */
+.highlight {
+    color: rgb(230, 119, 72); /* Color for the first word */
 }

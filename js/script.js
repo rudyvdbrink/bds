@@ -20,4 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            const offset = targetSection.offsetTop - document.getElementById('banner').offsetHeight;
+            window.scrollTo({
+                top: offset,
+                behavior: 'smooth'
+            });
+        });
+    });
 });
