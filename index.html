@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixed Banner and Navigation Bar</title>
+    <title>Brink Data Science</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,6 +17,11 @@
                 <a href="#pricing" class="nav-link">PRICING</a>
             </nav>
         </div>
+
+        <div id="bottom-strip">
+            
+        </div>
+
         <div class="center-column">
             <section id="home">
                 <p style="line-height: 1;">                  
@@ -24,6 +29,8 @@
                     <h2><span class="highlight">RUDY VAN DEN BRINK </span> PhD</h2>
                    
                     I help businesses and individuals make sense of data. I deliver tailored software solutions and custom AI models.
+                    <br>
+                    <br>
                 </p>
                 
                 <br>
@@ -41,51 +48,141 @@
                 </div>
                 <br>
                 <br>
+                <br>
                 <img src="./images/brain.png" alt="Image" class="home-brain">
                 <div class="info-box-2">
                     <h3><span class="highlight">WHY</span> WORK WITH ME:</h3>
                     <ul>
                         <li>Tailored Solutions: I take the time to understand your unique business challenges and deliver personalized results</li>
-                        <li>Proven Expertise: Between academia and industry I have over a decade of experience developing machine learning solutions to complex challenges</li>
+                        <li>Proven Expertise: Between academia and industry I have <a href="https://www.dropbox.com/s/vza0nrf7m3xru3n/CV_vandenBrink.pdf?dl=1">over a decade of experience</a> developing machine learning solutions to complex challenges</li>
                         <li>Clear Communication: I explain complex concepts in simple terms and ensure you’re involved every step of the way</li>
                     </ul>
                 </div>
                 <p>
                     <br>
-                    
+                    <br>
                     <a href="#contact" class="btn">Contact</a>
                     me today for a free consultation, and let’s discuss how AI can transform your business.
-                    <br>
+                    <a href="#next-section">
+                        <img src="images/arrow.png" alt="Arrow Down" class="arrow-down">
+                    </a>
                 </p>
             </section>
+                
+
             <hr>
             <section id="portfolio">
-                <h1>Portfolio</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Nulla facilisi. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies, turpis at fermentum iaculis, turpis nisi cursus turpis, ut ultricies turpis nisi cursus turpis.</p>
-                <div class="project right-align">
-                    <h2>Project 1</h2>
-                    <p>Description of Project 1.</p>
+                <h1><span class="highlight">PORTFOLIO</span></h1>
+                
+                <p>These selected examples showcase three custom AI models for wich I lead end-to-end development. Each project had individual aims, ranging from scientific research to product goals.</p>
+                
+                <!-- add tags to projects, like deep learning, or generative AI -->
+
+                <div class="project-box">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h2>Decoding Brain Signals</h2>
+                            <p>Description of Project 1.</p>
+                        </div>
+                        <img src="images/sr_decoding_performance.png" alt="Project 1 Image" class="project-image" onclick="showImage(this)">
+                    </div>
                 </div>
-                <div class="project left-align">
-                    <h2>Project 2</h2>
-                    <p>Description of Project 2.</p>
+                
+                <div class="project-box">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h2>Turning Ebooks Into Audiobooks</h2>
+                            <p>Generative AI.</p>
+                        </div>
+                        <img src="images/bm_logo.png" alt="Project 1 Image" class="project-image" onclick="showImage(this)">
+                    </div>
                 </div>
-                <div class="project right-align">
-                    <h2>Project 3</h2>
-                    <p>Description of Project 3.</p>
+                
+                <div class="project-box">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <h2>Detecting Skin Cancer</h2>
+                            <p>Generative AI.</p>
+                        </div>
+                        <img src="images/shap_results.png" alt="Project 1 Image" class="project-image" onclick="showImage(this)">
+                    </div>
                 </div>
+
+
             </section>
+            
             <hr>
             <section id="contact">
-                <h1>Contact</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Nulla facilisi. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies, turpis at fermentum iaculis, turpis nisi cursus turpis, ut ultricies turpis nisi cursus turpis.</p>
+                <h1><span class="highlight">CONTACT</span></h1>
+
+                <h1>Email</h1>
+                <p style="line-height: 1.5;">
+                Quotes or 15 minute consultations are free of charge. Please contact me at: <br>                
+                <a href="mailto:brinkdatascience@protonmail.com">brinkdatascience@protonmail.com</a> 
+                for any inquiries or to set up a meeting.
+                </p>
+
+                <br>
+                <h1>More information</h1>
+                <p>
+                    <ul style="line-height: 1.5;">
+                        <li>My main educational background is in neuroscience</li>
+                        <li>For more information on my professional history, see <a href="https://www.dropbox.com/s/vza0nrf7m3xru3n/CV_vandenBrink.pdf?dl=1">my CV</a></li>
+                        <li>I mainly work in Python and with packages for machine learning and data visualization</li>
+                        <li>My tech stack includes: </li>
+                    </ul> 
+
+                    <div style="text-align: center;">
+                        <img src="https://camo.githubusercontent.com/9ba3a3a9586140bca6c41357679eb215011b001558b1e31711c928c1b511b7a2/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d707974686f6e2c6d61746c61622c626173682c6d7973716c2c7673636f64652c6769746875622c6769742c6c696e75782c74656e736f72666c6f772c7079746f7263682c736b6c6561726e" alt="Tech Stack" class="tech-stack-image">
+                    </div>
+                    <ul>                        
+                        <li>Find code examples on my <a href="https://www.github.com/rudyvdbrink">GitHub page</a>.</li>
+                    </ul>
+                </p>
+                <br>
+
+                <h1>Socials</h1>
+                <p>
+                    You can also find more information or reach out to me on the following platforms:
+                </p>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/rudy-van-den-brink-3301b5283/" target="_blank">
+                        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+                    </a>
+                    <a href="https://ruudvandenbrink.net/" target="_blank">
+                        <img src="https://img.shields.io/badge/Website-E67748?style=for-the-badge&logo=todoist&logoColor=white" alt="Website" />
+                    </a>
+                    <a href="https://github.com/rudyvdbrink" target="_blank">
+                        <img src="https://img.shields.io/badge/Github-333333?style=for-the-badge&logo=github&logoColor=white" alt="Github" />
+                    </a>
+                    <a href="https://www.dropbox.com/s/vza0nrf7m3xru3n/CV_vandenBrink.pdf?dl=1" target="_blank">
+                        <img src="https://img.shields.io/badge/Full CV-333333?style=for-the-badge&logo=read.cv&logoColor=white" alt="Full CV" />
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=gKseug0AAAAJ&hl=de" target="_blank">
+                        <img src="https://img.shields.io/badge/Scholar-334333?style=for-the-badge&logo=google scholar&logoColor=white" alt="Scholar" />
+                    </a>
+                    <a href="https://bsky.app/profile/rudyvdbrink.bsky.social" target="_blank">
+                        <img src="https://img.shields.io/badge/Bluesky-0077B5?style=for-the-badge&logo=Bluesky&logoColor=white" alt="Bluesky" />
+                    </a>
+                </div>
+         
             </section>
             <hr>
             <section id="pricing">
-                <h1>Pricing</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Nulla facilisi. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies, turpis at fermentum iaculis, turpis nisi cursus turpis, ut ultricies turpis nisi cursus turpis.</p>
+                <h1><span class="highlight">PRICING</span></h1>
+
+                <p style="line-height: 1.5;">
+                    The cost of your project will depend on the complexity of the task and the time required to complete it.
+
+                    My standard rate is &euro;100 per hour. For larger projects, I can provide a fixed price quote.
+                </p>
             </section>
         </div>
+    </div>
+    <div id="image-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
     </div>
     <script src="js/script.js"></script>
 </body>

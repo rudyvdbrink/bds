@@ -33,4 +33,33 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Scroll to portfolio section when arrow is clicked
+    const arrowDown = document.querySelector('.arrow-down');
+    if (arrowDown) {
+        arrowDown.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetSection = document.getElementById('portfolio');
+            const offset = targetSection.offsetTop - document.getElementById('banner').offsetHeight;
+            window.scrollTo({
+                top: offset,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
+
+// Function to show the image in a modal
+function showImage(img) {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-image');
+    modal.style.display = 'block';
+    modalImg.src = img.src;
+}
+
+// Function to close the modal
+function closeModal() {
+    const modal = document.getElementById('image-modal');
+    modal.style.display = 'none';
+}
+
