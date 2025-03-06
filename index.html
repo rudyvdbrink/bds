@@ -23,11 +23,28 @@
         </div>
 
         <div class="center-column">
-            <section id="home">
-                <p style="line-height: 1;">                  
 
+            <!-- <div class="top-banner">
+                <div class="top-banner-text">
+                    <p style="line-height: 1;">
+                        <h2><span class="highlight">RUDY VAN DEN BRINK </span> PhD</h2>
+                        I help businesses and individuals make sense of data. I deliver tailored software solutions and custom AI models.
+                        
+                    </p>
+                </div>
+                <img src="images/dnn_graphic.png" alt="DNN Graphic" class="top-banner-image">
+            </div> -->
+
+            
+
+            <div class="center-column-content">
+                
+
+            <section id="home">
+
+                <br>
+                <p style="line-height: 1;">
                     <h2><span class="highlight">RUDY VAN DEN BRINK </span> PhD</h2>
-                   
                     I help businesses and individuals make sense of data. I deliver tailored software solutions and custom AI models.
                     <br>
                     <br>
@@ -74,7 +91,8 @@
             <section id="portfolio">
                 <h1><span class="highlight">PORTFOLIO</span></h1>
                 
-                <p>These selected examples showcase three custom AI models for wich I lead end-to-end development. Each project had individual aims, ranging from scientific research to product goals.</p>
+                <p>These selected examples showcase three custom AI models for wich I lead end-to-end development. Each project had 
+                    individual aims, ranging from scientific research to app development.</p>
                 
                 <!-- add tags to projects, like deep learning, or generative AI -->
 
@@ -82,9 +100,28 @@
                     <div class="project-content">
                         <div class="project-text">
                             <h2>Decoding Brain Signals</h2>
-                            <p>Description of Project 1.</p>
+                            <p>
+                                <ul>
+                                <li>Classifiers recognize patterns in brain activity and identify signals linked to visual perception and action</li>
+                                <li>A Bayesian model estimates hidden beliefs that people hold </li>
+                                <li>The combination of these models lets us track how information flows across the brain and results in decision formation</li>
+                                <li>The system can identify when brain activity patterns break down, helping explain mistakes in decision-making</li>
+                                </ul>
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Machine Learning</span>                                
+                                <span class="tag">SVM</span>
+                                <span class="tag">Classification</span>
+                                <span class="tag">Regression</span>
+                                <span class="tag">Time-series analysis</span>
+                            </div>
                         </div>
-                        <img src="images/sr_decoding_performance.png" alt="Project 1 Image" class="project-image" onclick="showImage(this)">
+                        <div class="project-image-container">
+                            <img src="images/sr_decoding_performance.png" alt="Project 1 Image" class="project-image" onclick="showImage(this)">
+                            <div class="project-details-text">
+                                <a href="https://www.cell.com/neuron/fulltext/S0896-6273(22)01032-7" style="color: white;">See project details ></a>
+                            </div>
+                        </div>    
                     </div>
                 </div>
                 
@@ -92,19 +129,66 @@
                     <div class="project-content">
                         <div class="project-text">
                             <h2>Turning Ebooks Into Audiobooks</h2>
-                            <p>Generative AI.</p>
+                            <p>
+                                <ul>
+                                <li>An open-source application to turn ebooks into audiobooks</li>
+                                <li>Includes a text-to-speech model capable of zero-shot prediction</li>
+                                <li>Uses natural language processing tools to parse ebooks</li>
+                                <br>
+                                <audio controls style="margin-left: 20px;">
+                                    <source src="media/example.wav" type="audio/wav">
+                                    Your browser does not support the audio element.
+                                </audio>                               
+
+                                </ul>
+                            </p>
+
+                            <div class="project-tags">
+                                <span class="tag">Generative AI</span>                                
+                                <span class="tag">Zero-shot prediction</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">Open source</span>
+
+                            </div>
+
                         </div>
-                        <img src="images/bm_logo.png" alt="Project 1 Image" class="project-image" onclick="showImage(this)">
-                    </div>
+                        <div class="project-image-container">
+                            <img src="images/bm_logo.png" alt="Project 1 Image" class="project-image" onclick="showImage(this)" style="margin-bottom: 10px;">
+                            <div class="project-details-text">
+                                <a href="https://github.com/rudyvdbrink/book_maker/blob/main/README.md" style="color: white;">See project details ></a>
+                            </div>
+                        </div>                     </div>
                 </div>
                 
                 <div class="project-box">
                     <div class="project-content">
                         <div class="project-text">
                             <h2>Detecting Skin Cancer</h2>
-                            <p>Generative AI.</p>
+                            <ul>
+                                <li>An application to diagnose skin lesions</li>
+                                <li>Includes three large convolutional neural networks</li>
+                                <li>Models were quantized to run on limited hardware and deployed in a web-app</li>
+                                <li>Includes functionality to interrogate the model for what features it is relying on: explainable AI</li>
+                                <li>Bias in model performance mitigated through an elaborate training procedure</li>
+                                <br>
+                                                             
+
+                            </ul>
+
+                            <div class="project-tags" style="margin-top: 30px;">
+                                <span class="tag">CNN</span>                                
+                                <span class="tag">Transfer learning</span>
+                                <span class="tag">Image augmentation</span>
+                                <span class="tag">Deep learning</span>
+
+                            </div>
                         </div>
-                        <img src="images/shap_results.png" alt="Project 1 Image" class="project-image" onclick="showImage(this)">
+                        <div class="project-image-container">
+                            <img src="images/shap_results.png" alt="Project 1 Image" class="project-image" onclick="showImage(this)" style="margin-bottom: -10px;">
+                            <div class="project-details-text">
+                                <a href="https://skin-lesion-prediction.streamlit.app/about" style="color: white;">See project details ></a>
+                            </div>
+                        </div> 
                     </div>
                 </div>
 
@@ -179,6 +263,8 @@
                 </p>
             </section>
         </div>
+    </div>
+
     </div>
     <div id="image-modal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
