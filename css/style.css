@@ -4,12 +4,16 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 }
 
 a {
     text-decoration: none;
     color: rgb(60, 136, 168);
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .wrapper {
@@ -102,22 +106,6 @@ a {
     font-size: 14px; /* Adjust font size as needed */
 }
 
-/* Home section image styling */
-.home-image {
-    float: right;
-    margin-left: 10px;
-    margin-top: 40px;
-    width: 150px; /* Adjust width as needed */
-    height: auto;
-}
-
-.home-brain {
-    float: left;
-    margin-right: 10px;
-    margin-top: 80px;
-    width: 150px; /* Adjust width as needed */
-    height: auto;
-}
 
 nav {
     display: flex;
@@ -144,13 +132,93 @@ hr {
     margin: 20px 0;
 }
 
-/* section formatting */
 #home {
-    padding-top: 0%;
-    padding-bottom: 10%;
-    font-size: 20px;
-    color: #777;    
+    height: 80vh; /* Full viewport height */
+    background-color: rgb(60, 136, 168);
+    padding: 50px 20px;
+    color: white;
+    border-bottom: 2px solid rgb(230, 119, 72);
+    margin-bottom: 8%;
+    font-size: 21;
 }
+
+#home a {
+    color: rgba(38, 30, 48, 0.9); /* Change this color as needed */
+    text-decoration: none;
+}
+
+#home a:hover {
+    color: rgba(38, 30, 48, 0.7); /* Change this color as needed */
+    text-decoration: none;
+}
+
+
+
+#home .intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+#home .intro p {
+    flex: 1;
+    margin-left: 5%
+}
+
+#home .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5%;
+    font-size: 21px;
+}
+
+#home .home-image {
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    margin-right: auto; /* Align the image to the left */
+}
+
+#home .contact-section {
+    text-align: center;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between; /* Distribute elements evenly */
+    align-items: center;
+    width: 100%; /* Ensure the section takes up the full width */
+    padding: 5% 0px; /* Add some padding to the sides */
+    font-size: 24px;
+}
+
+#home .contact-section a {
+    color: white !important;
+    text-decoration: none; /* Add this if you want to remove underline */
+}
+
+#home .contact-section .btn {
+    background-color: rgb(230, 119, 72);
+    color: white; /* Ensure the text color is white */
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.contact-section .btn:hover {
+    background-color: rgba(230, 119, 72, 0.8);
+    color: white; /* Ensure the text color remains white on hover */
+}
+
+.contact-section p {
+    margin: 0 0px 0px -28%; /* Add some space between the text and other elements */
+    flex: 1; /* Allow the text to take up available space */
+    text-align: center; /* Center the text */
+}
+
+
 
 #portfolio {
     padding-top: 0%;
@@ -187,26 +255,9 @@ hr {
 }
 
 
-/* Info box styling */
-.info-box-1, .info-box-2 {
-    background-color: #f8f8f8;
-    border-radius: 0px;
-    padding: 20px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 80%; /* Adjust the width as needed */
-    line-height: 1.5;
-}
 
-/* Info box 2 specific styling */
-.info-box-2 {
-    max-width: 80%;
-    margin-left: auto; /* Align to the right */
-}
 
-/* Project box styling */
+/* PORTFOLIO Project box styling */
 .project-box {
     background-color: transparent;
     border: 1.5px solid rgb(60, 136, 168);
@@ -358,7 +409,7 @@ ul li::before {
 .arrow-down {
     width: 24px; /* Adjust size as needed */
     height: auto;
-    margin-left:98%;
+    margin-left:10%;
     cursor: pointer;
     justify-content: flex-end
 }
@@ -402,6 +453,24 @@ ul li::before {
     overflow: hidden; /* Hide any overflow */
 }
 
+.bottom-top-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Match the max-width of the center column */
+    background-color: rgba(60, 136, 168, 1);
+    display: flex;
+    justify-content: flex-start; /* Adjust as needed */
+    align-items: center; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding within the width */
+    margin: 0 auto; /* Center the wrapper */
+    padding: 0px 0; /* Adjust padding as needed */
+    position: absolute; /* Position the wrapper absolutely */
+    top: calc(100vh - 127px); /* Position the wrapper exactly one vertical scrolling distance from the top of the page */
+    border-top: 2px solid rgb(230, 119, 72); /* Add a border to separate the wrapper from the center column */
+    border-bottom: 2px solid rgb(230, 119, 72); /* Add a border to separate the wrapper from the center column */
+    transform: translateY(-20px) translateX(-60px); /* Adjust as needed */
+    overflow: hidden; /* Hide any overflow */
+}
+
 .top-lattice-image {
     padding-top: 10px;
     padding-bottom: 0px;
@@ -414,6 +483,20 @@ ul li::before {
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.0) 100%);
 }
+
+.top-bottom-lattice-image {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    width: 100%;
+    height: auto;
+    filter: invert(1); /* Invert the colors */
+    clip-path: inset(0 0 0 5%); /* Crop 15% off the left side */
+    transform: translateY(-10px) scale(1.5) scaleX(1); /* Shift the image up by 10px */
+    margin-left: -5%; /* Align the left-most edge of the image with the left side of the bottom wrapper */
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.0) 100%);
+}
+
 
 .top-wrapper-text {
     position: absolute;
