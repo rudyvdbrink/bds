@@ -407,12 +407,12 @@ ul li::before {
     padding-bottom: 0px;
     width: 100%;
     height: auto;
-    opacity: 0.50; /* Make the image 20% transparent */
     filter: invert(1); /* Invert the colors */
     clip-path: inset(0 0 0 5%); /* Crop 15% off the left side */
     transform: translateY(-10px) scale(1.5) scaleX(-1); /* Shift the image up by 10px */
     margin-left: -5%; /* Align the left-most edge of the image with the left side of the bottom wrapper */
-
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.0) 100%);
 }
 
 .top-wrapper-text {
@@ -427,8 +427,6 @@ ul li::before {
     width: auto;
     height: auto;
 }
-
-
 
 .top-wrapper-description {
     position: absolute;
@@ -449,7 +447,7 @@ ul li::before {
     align-items: center; /* Center the image vertically */
     box-sizing: border-box; /* Include padding within the width */
     margin: 0 auto; /* Center the wrapper */
-    padding: 0px 0; /* Adjust padding as needed */
+    padding: 0px 0px 5px; /* Adjust padding as needed */
     position: absolute; /* Position the wrapper absolutely */
     bottom: 0; /* Align the bottom of the wrapper with the bottom of the center column */
     border-top: 2px solid rgb(230, 119, 72); /* Add a border to separate the wrapper from the center column */
@@ -462,10 +460,10 @@ ul li::before {
     padding-bottom: 0px;
     width: 100%;
     height: auto;
-    opacity: 0.50; /* Make the image 20% transparent */
     filter: invert(1); /* Invert the colors */
     clip-path: inset(0 0 0 5%); /* Crop 15% off the left side */
     transform: translateY(-10px) scale(1.5); /* Shift the image up by 10px */
     margin-left: -5%; /* Align the left-most edge of the image with the left side of the bottom wrapper */
-
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.0) 100%);
 }
