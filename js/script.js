@@ -63,3 +63,41 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
+// Function to scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var nav = document.querySelector("nav");
+    var topWrapperText = document.querySelector(".top-wrapper-text");
+
+    if (nav && topWrapperText) {
+        var navWidth = nav.offsetWidth;
+        var fontSize = 16; // Initial font size in pixels
+        var maxFontSize = 100; // Maximum font size in pixels
+        var minFontSize = 10; // Minimum font size in pixels
+
+        // Function to adjust font size
+        function adjustFontSize() {
+            topWrapperText.style.fontSize = fontSize + "px";
+            while (topWrapperText.offsetWidth < navWidth && fontSize < maxFontSize) {
+                fontSize++;
+                topWrapperText.style.fontSize = fontSize + "px";
+            }
+            while (topWrapperText.offsetWidth > navWidth && fontSize > minFontSize) {
+                fontSize--;
+                topWrapperText.style.fontSize = fontSize + 10 + "px";
+            }
+        }
+
+        // Initial adjustment
+        adjustFontSize();
+
+        // Adjust font size on window resize
+        window.addEventListener("resize", function() {
+            navWidth = nav.offsetWidth;
+            adjustFontSize();
+        });
+    }
+});
