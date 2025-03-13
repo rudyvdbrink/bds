@@ -6,3 +6,5 @@ images/sr_decoding_method.png
 *.svg
 
 to_do.txt
+scrap/
+.vscode/

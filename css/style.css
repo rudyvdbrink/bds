@@ -1,10 +1,23 @@
-body {
-    font-family: Helvetica, sans-serif;
-    margin: 0;
+body, html {
     padding: 0;
-    background-color: #f0f0f0;
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+    max-width: 1200px; /* Optional: Set a max width for larger screens */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.page-content {
     display: flex;
-    justify-content: center;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(19, 15, 24), rgb(41, 32, 50)); /* Gradient from top to bottom */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow along the sides */
+
 }
 
 a {
@@ -16,50 +29,19 @@ a:hover {
     text-decoration: underline;
 }
 
-.wrapper {
-    width: 100%;
-    max-width: 1200px; /* Optional: Set a max width for larger screens */
-    position: relative;    
+body h1 {
+    font-size: 2rem;
+    margin: 1rem 0; /* Specify margin for h1 elements */
 }
 
-.center-column {
-    width: 100%;
-    background-color: #fff;    
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    margin-top: 60px; /* Adjust based on the height of the banner and navbar */
-    margin-bottom: 10px; /* Fixed bottom margin */
-    position: relative; /* Ensure relative positioning for absolute child */    
+hr {
+    border: 0;
+    height: 2px;
+    background: #ccc;
+    margin: 4% 8% 0 8%;
 }
 
-.center-column-content {
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box; /* Include padding within the width */
-}
-
-.top-banner {
-    width: 100%;
-    background-color: rgba(60, 136, 168, 1);
-    display: flex;
-    justify-content: space-between; /* Align text to the left and image to the right */
-    align-items: center; /* Center items vertically */
-    padding: 20px; /* Adjust padding as needed */
-    box-sizing: border-box; /* Include padding within the width */
-}
-
-.top-banner-text {
-    flex: 1; /* Allow text to take up remaining space */
-    color: white; /* Text color */
-    padding-left: 4%;
-}
-
-.top-banner-image {
-    max-width: 30%; /* Ensure the image does not overflow */
-    height: auto;
-    align-items: top;
-}
-
+/* TOP-BANNER */
 #banner {
     position: fixed;
     top: 0;
@@ -70,7 +52,7 @@ a:hover {
     height: 80px; /* Adjust height as needed */
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgba(60, 136, 168, 1); 
+    background-color: rgba(60, 136, 168, 1); /* needed */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,33 +62,17 @@ a:hover {
 }
 
 #banner img {
-    height: 100%;
-    padding-left: 5%;
-}
-
-#bottom-strip {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1200px; /* Match the max-width of the wrapper */
-    height: 10px; /* Adjust height as needed */
-    background-color: rgba(60, 136, 168, 1); 
     display: flex;
-    z-index: 1000;
-    box-sizing: border-box; /* Include padding within the width */
-    padding: 5px 0; /* Adjust padding as needed */
-    border-top: 2px solid rgb(230, 119, 72);
+    max-height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-#bottom-strip p {
-    margin: 0;
-    color: white; /* Text color */
-    font-size: 14px; /* Adjust font size as needed */
+#banner a:hover {
+    text-decoration: none;
 }
 
-
+/* NAVIGATION */
 nav {
     display: flex;
     align-items: center;
@@ -125,177 +91,253 @@ nav a:hover, nav a.active {
     color: white;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    margin: 20px 0;
-}
 
+/* SECTION DEFINITIONS */
 #home {
-    height: 80vh; /* Full viewport height */
-    background-color: rgb(60, 136, 168);
-    padding: 50px 20px;
-    color: white;
-    border-bottom: 2px solid rgb(230, 119, 72);
-    margin-bottom: 8%;
-    font-size: 21;
+    background: linear-gradient(to bottom, rgba(60, 136, 168, 1), rgb(38, 109, 140)); /* Gradient from top to bottom */
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
 }
 
-#home a {
-    color: rgba(38, 30, 48, 0.9); /* Change this color as needed */
-    text-decoration: none;
+#services {
+    width: 100%;
 }
-
-#home a:hover {
-    color: rgba(38, 30, 48, 0.7); /* Change this color as needed */
-    text-decoration: none;
-}
-
-
-
-#home .intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 24px;
-}
-
-#home .intro p {
-    flex: 1;
-    margin-left: 5%
-}
-
-#home .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 5%;
-    font-size: 21px;
-}
-
-#home .home-image {
-    width: 20%;
-    height: auto;
-    border-radius: 50%;
-    margin-right: auto; /* Align the image to the left */
-}
-
-#home .contact-section {
-    text-align: center;
-    margin-top: 0px;
-    display: flex;
-    justify-content: space-between; /* Distribute elements evenly */
-    align-items: center;
-    width: 100%; /* Ensure the section takes up the full width */
-    padding: 5% 0px; /* Add some padding to the sides */
-    font-size: 24px;
-}
-
-#home .contact-section a {
-    color: white !important;
-    text-decoration: none; /* Add this if you want to remove underline */
-}
-
-#home .contact-section .btn {
-    background-color: rgb(230, 119, 72);
-    color: white; /* Ensure the text color is white */
-    padding: 5px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-}
-
-.contact-section .btn:hover {
-    background-color: rgba(230, 119, 72, 0.8);
-    color: white; /* Ensure the text color remains white on hover */
-}
-
-.contact-section p {
-    margin: 0 0px 0px -28%; /* Add some space between the text and other elements */
-    flex: 1; /* Allow the text to take up available space */
-    text-align: center; /* Center the text */
-}
-
-
 
 #portfolio {
-    padding-top: 0%;
-    padding-bottom: 5%;
-    font-size: 24px;
-    color: #777;
+    padding-top: 40px;
+    width: 100%;
+    background-color: white;
 }
 
 #contact {
-    padding-top: 0%;
-    padding-bottom: 5%;
-    font-size: 24px;
-    color: #777;
+    padding-top: 40px;
+    width: 100%;
+    height: calc(100vh - 120px); /* Adjust height to include the top banner, as well as padding */
+    background-color: white;
+    position: relative; /* Ensure the pseudo-element is positioned relative to the section */
 }
 
 #pricing {
-    padding-top: 0%;
-    padding-bottom: 5%;
-    font-size: 24px;
-    color: #777;
+    padding-top: 40px;
+    width: 100%;
+    height: calc(100vh - calc(120px + 30px)); /* Adjust height to include the top banner, as well as padding, and the footer */
+    background-color: white;
 }
 
-/* Project alignment styles */
-.project {
-    margin: 20px 0;
+#border { /* line dividing the sections */
+    width: 100%;
+    height: auto; 
+    background-color: white;
 }
 
-.right-align {
+#footer { /* thin strip at the very bottom */
+    width: 100%;
+    height: 30px; /* Adjust height as needed */
+    background-color: rgba(60, 136, 168, 1); /* Set background color */
+    color: rgb(74, 74, 74);
+    max-width: 1200px; /* Match the max-width of the wrapper */
+    display: flex;
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding within the width */
+    border-top: 2px solid rgb(230, 119, 72);
+}
+
+/* Highlight styling */
+.highlight {
+    color: rgb(230, 119, 72); /* Color for the first word */
+}
+
+
+
+/* LAYOUT OF HOME PAGE */
+.home-page {
+    display: flex;
+    height: 100vh;
+}
+
+.home-container {
+    display: grid;
+    grid-template-rows: 80px 1fr auto;
+    width: 100%;
+    height: 100%;
+    gap: 10px; /* Add space between grid boxes */
+}
+
+.top-row {
+    background-color: #f0f0f0;
+}
+
+.content-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    gap: 1rem; /* Add space between columns in this row */
+    padding-top: 30%; /* Determine the space between the top of the container and the content */
+    transform: translateX(-4%); /* Adjust the position of the content */
+} 
+
+.photo {
     text-align: right;
 }
 
-.left-align {
-    text-align: left;
+.photo img {
+    max-width: 50%;
+    height: auto;
 }
 
-
-
-
-/* PORTFOLIO Project box styling */
-.project-box {
-    background-color: transparent;
-    border: 1.5px solid rgb(60, 136, 168);
-    border-radius: 4px;
-    padding: 20px;
-    padding-bottom: 40px;
-    margin-bottom: 20px;
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Include padding within the width */
+.intro-text {
+    padding-right: 4%;
 }
 
-.project-content {
-    display: flex;
-    align-items: flex-start; /* Align items to the top */
-    justify-content: space-between;
+.intro-text h1 {
+    line-height: 0; 
+    font-size: 1.5rem !important;
+
 }
 
+.name-highlight {
+    line-height: 0.5;
+    color: rgba(38, 30, 48, 0.9); 
 
-.project-text {
-    flex: 1;
-    margin-top: -20px;
 }
 
-.project-tags {
-    display: flex;
-    justify-content: left; /* Evenly space tags */
-    flex-wrap: wrap; /* Allow tags to wrap to the next line if needed */
-    margin-top: 10px; /* Adjust margin as needed */
+.degree-highlight {
+    color: rgb(230, 119, 72); /* Set the color to orange */
 }
 
-.tag {
-    background-color: rgb(230, 119, 72);
+.intro-text p {
+    line-height: 1.5;
+    font-size: 1rem !important;
     color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    margin: 5px; /* Adjust margin as needed */
-    font-size: 14px; /* Adjust font size as needed */
-    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.intro-text button {
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove border-radius */
+    background-color: rgb(230, 119, 72); /* Set background color */
+    color: white; /* Set text color */
+    padding: 0.5rem 1rem; /* Add padding */
+    font-size: 1.5rem !important; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove outline */
+    display: inline-flex; /* Use inline-flex to align icon and text */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    line-height: normal; /* Reset line-height */
+    letter-spacing: 2px; /* Add letter spacing */
+}
+
+.button-icon {
+    height: 1em; /* Set height to match the font size */
+    margin-right: 0.5rem; /* Add space between icon and text */
+    filter: invert(100%); /* Invert colors */
+    transform: translateY(0.1em); /* Adjust vertical alignment */
+}
+
+.intro-text button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+.intro-text button:active {
+    transform: scale(0.98); /* Slightly scale down on click */
+}
+
+
+.arrow-down {
+    text-align: right;
+    padding-right: 4%; /* Reduced padding */
+    padding-bottom: 2%;
+    /* border: 1px solid #ccc; Border for visualization */
+}
+
+.arrow-down img {
+    width: 2rem; /* Adjust size as needed */
+    height: auto;
+}
+
+.logo {
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    padding-bottom: 2%;
+    transform: translateX(-200%);
+}
+
+/* LAYOUT OF SERVICES PAGE */
+.services-page {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 79px); /* Adjust height to include the top banner */
+    color: white;
+    align-items: center; /* Center items horizontally */
+    position: relative; /* Allow absolute positioning of the arrow-down */
+}
+
+.info-box {
+    padding-top: 15%; /* Determine the space between the top of the container and the content */
+    padding-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Center text */
+}
+
+.info-box h1 {
+    font-size: 2.7rem; /* Font size for the big headings */
+}
+
+.info-box ul {
+    padding: 0; /* bullet points default padding removed */
+    padding-left: 4% /* we do want a little bit of padding on the left */
+}
+
+.info-box li {
+    margin-bottom: 1rem; /* Add space between list items */    
+}
+
+.arrow-down-container {
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    position: absolute; /* Position absolutely within the page */
+    bottom: 0px; /* Position at the bottom */
+    right: 0px; /* Adjust as needed */
+}
+
+
+/* LAYOUT OF THE PORTFOLIO PAGE */
+.portfolio-page {
+    width: 100%;
+    max-width: 1200px; /* Optional: Set a max width for larger screens */
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+    align-items: flex-start; /* Align items to the left */
+    position: relative; /* Allow absolute positioning of the arrow-down */
+    padding: 0 8%; /* Add 4% padding on left and right */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    color:rgba(38, 30, 48, 1)
+}
+
+.portfolio-page h1, .portfolio-page p {
+    text-align: left; /* Ensure text is aligned to the left */
+    margin: 0; /* Remove default margin */
+    padding-bottom: 0; /* Add some space between elements */
+}
+.portfolio-page h1 {
+    font-size: 2.7rem; /* Adjust font size as needed */
+    line-height: 1;
+    margin-bottom: 1rem; /* Add space between elements */
+}
+
+.portfolio-page h2 {
+    color:rgba(38, 30, 48, 1); 
+    line-height: 1;
+    margin: 0;
+}
+
+.portfolio-page p {
+    line-height: 1.5rem;
 }
 
 .project-image {
@@ -305,21 +347,220 @@ hr {
     cursor: pointer;
 }
 
-.project-image-container {
-    position: relative;
-    width: 40%; /* Adjust width as needed */
-    height: auto;
+.project-box {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr .8fr;
+    border: 1.5px solid rgb(60, 136, 168);
+    border-radius: 4px;
+    margin-bottom: 8%;
+    width: 100%; /* Full width */
+}
+
+.project-item {
+    padding: 4% 4%;
+    box-sizing: border-box;
+}
+
+.top-left {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.top-left li {
+    margin-bottom: 1rem; /* Add space between list items */
+    line-height: 1.5rem;
+}
+
+.top-right {
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.bottom-left {
+    padding-top: 0;
+    margin-top: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.bottom-right {
+    padding-top: 0;
+    margin-top: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateY(0.25rem); /* Align with project tags */
+}
+
+.project-tags {
+    display: flex;
+    justify-content: left; /* Evenly space tags */
+    flex-wrap: wrap; /* Allow tags to wrap to the next line if needed */
+}
+
+.tag {
+    background-color: rgb(230, 119, 72);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 5px; /* Adjust margin as needed */
+    font-size: 1rem; /* Adjust font size as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .project-details-text {
-    position: absolute;
-    bottom: -60px; /* Adjust this value to position the text below the image */
-    right: 20px;
     background-color: rgb(60, 136, 168);
     color: white;
     cursor: pointer;
     padding: 5px 10px;
 }
+
+
+/* LAYOUT OF THE CONTACT PAGE  */
+.contact-page {
+    width: 100%;
+    height: inherit;
+    max-width: 1200px; /* Optional: Set a max width for larger screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: flex-start; /* Align items to the left */
+    position: relative; /* Allow absolute positioning of the arrow-down */
+    padding: 0 8%; /* Add 8% padding on left and right */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    color: rgba(38, 30, 48, 1);    
+}
+
+.contact-page h1, .contact-page p {
+    text-align: left; /* Ensure text is aligned to the left */
+    margin: 0; /* Remove default margin */
+    padding-bottom: 1rem; /* Add some space between elements */
+}
+
+.contact-page p {
+    line-height: 1.5rem;
+}
+
+.contact-page li {
+    margin-bottom: 0rem; /* Add space between list items */
+    line-height: 1.5rem;
+}
+
+.contact-page h1 {
+    font-size: 2.7rem; /* Adjust font size as needed */
+    line-height: 1;
+    margin-bottom: 1rem; /* Add space between elements */
+}
+
+.contact-page h2 {
+    color:rgba(38, 30, 48, 1); 
+    line-height: 1.5;
+    margin: 0;
+}
+
+.contact-content {
+    text-align: left; /* Ensure text is aligned to the left */
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between items */
+    margin-bottom: 15%;
+}
+
+.box-container{
+    text-align: inherit;
+}
+
+.tech-stack-image { 
+    max-width: 100%;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between; /* Evenly space items with no extra space on sides */
+    align-items: center;
+    width: 100%;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    box-sizing: border-box;
+    flex-wrap: wrap; 
+    
+}
+
+.social-links a {
+    text-decoration: none;
+    margin: 0; /* Remove margin from links */
+    padding: 0; /* Remove padding from links */
+}
+
+
+/* LAYOUT OF THE PRICING PAGE  */
+.pricing-page {
+    width: 100%;
+    height: inherit;
+    max-width: 1200px; /* Optional: Set a max width for larger screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: flex-start; /* Align items to the left */
+    position: relative; /* Allow absolute positioning of the arrow-down */
+    padding: 0 8%; /* Add 8% padding on left and right */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    color: rgba(38, 30, 48, 1);    
+}
+
+.pricing-page h1, .pricing-page p {
+    text-align: left; /* Ensure text is aligned to the left */
+    margin: 0; /* Remove default margin */
+    padding-bottom: 1rem; /* Add some space between elements */
+}
+
+.pricing-page h1 {
+    font-size: 2.7rem; /* Adjust font size as needed */
+    line-height: 1;
+    margin-bottom: 1rem; /* Add space between elements */
+}
+
+.pricing-page h2 {
+    color:rgba(38, 30, 48, 1); 
+    line-height: 1.5;
+    margin: 0;
+}
+
+.pricing-page li {
+    margin-bottom: 0rem; /* Add space between list items */
+    line-height: 1.5rem;
+}
+
+.pricing-content {
+    text-align: left; /* Ensure text is aligned to the left */
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Distribute space between items */
+    margin-top: 0%;
+    gap: 4rem; /* Add space between elements */
+}
+
+/* LAYOUT OF THE FOOTER CONTENT */
+.footer-content {
+    padding: 0;
+    padding-left: 4%;
+    line-height: 0;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Modal styling */
 .modal {
@@ -360,193 +601,72 @@ hr {
     cursor: pointer;
 }
 
-/* Custom bullet points */
-ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding-left: 20px; /* Add padding to align with custom bullets */
-}
+/* Media query for screens below 1200px */
+@media (max-width: 1200px) {
 
-ul li {
-    position: relative;
-    padding-left: 20px; /* Space for custom bullet */
-}
+    .intro-text h1 {
+        font-size: 2vw; /* Adjust font size */
+    }
 
-ul li::before {
-    content: '■'; /* Unicode for a small square */
-    position: absolute;
-    left: 0;
-    color: rgba(60, 136, 168, 1); /* Match the banner color */
-}
+    .intro-text p {
+        font-size: 1.5vw; /* Adjust font size */
+    }
+
+    .intro-text button {
+        font-size: 2vw; /* Adjust font size */
+    }
+
+    .photo img {
+        max-width: 60%; /* Adjust width for smaller screens */
+    }
     
-/* Highlight styling */
-.highlight {
-    color: rgb(230, 119, 72); /* Color for the first word */
-}
-
-/* Highlight styling */
-.name-highlight {
-    color: rgba(38, 30, 48, 0.9); /* Color for the first word */
-}
-
-/* Social links styling */
-.social-links {
-    display: flex;
-    justify-content: space-between; /* Evenly space items with no extra space on sides */
-    align-items: center;
-    width: 100%;
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    box-sizing: border-box;
-}
-
-.social-links a {
-    text-decoration: none;
-    margin: 0; /* Remove margin from links */
-    padding: 0; /* Remove padding from links */
-}
-
-/* Arrow styling */
-.arrow-down {
-    width: 24px; /* Adjust size as needed */
-    height: auto;
-    margin-left:10%;
-    cursor: pointer;
-    justify-content: flex-end
-}
-
-.arrow-down:hover {
-    opacity: 0.8; /* Slightly fade on hover */
-}
-
-.bottom-images {
-    display: flex;
-    justify-content: space-between; /* Space out the items to the edges */
-    align-items: center; /* Center the items vertically */
-    padding-top: 30%; /* Adjust padding as needed */
-    padding-bottom: 5%; /* Adjust padding as needed */
-}
-
-.bottom-images img {
-    width: 2%; /* Adjust width as needed */
-}
-
-.scroll-to-top {
-    transform: rotate(180deg); /* Flip the arrow upside-down */
-    cursor: pointer;
 }
 
 
-.top-wrapper {
-    width: 100%;
-    max-width: 1200px; /* Match the max-width of the center column */
-    background-color:  rgba(60, 136, 168, 1);
-    display: flex;
-    justify-content: flex-start; /* Align the image to the left */
-    align-items: center; /* Center the image vertically */
-    box-sizing: border-box; /* Include padding within the width */
-    margin: 0 auto; /* Center the wrapper */
-    padding: 0px 0; /* Adjust padding as needed */
-    position: absolute; /* Position the wrapper absolutely */
-    top: 0; /* Align the bottom of the wrapper with the bottom of the center column */
-    border-bottom: 2px solid rgb(230, 119, 72); /* Add a border to separate the wrapper from the center column */
-    transform: translateY(20px) translateX(-60px);
-    overflow: hidden; /* Hide any overflow */
-}
+/* Media query for screens below 800px */
+@media (max-width: 800px) {
 
-.bottom-top-wrapper {
-    width: 100%;
-    max-width: 1200px; /* Match the max-width of the center column */
-    background-color: rgba(60, 136, 168, 1);
-    display: flex;
-    justify-content: flex-start; /* Adjust as needed */
-    align-items: center; /* Adjust as needed */
-    box-sizing: border-box; /* Include padding within the width */
-    margin: 0 auto; /* Center the wrapper */
-    padding: 0px 0; /* Adjust padding as needed */
-    position: absolute; /* Position the wrapper absolutely */
-    top: calc(100vh - 127px); /* Position the wrapper exactly one vertical scrolling distance from the top of the page */
-    border-top: 2px solid rgb(230, 119, 72); /* Add a border to separate the wrapper from the center column */
-    border-bottom: 2px solid rgb(230, 119, 72); /* Add a border to separate the wrapper from the center column */
-    transform: translateY(-20px) translateX(-60px); /* Adjust as needed */
-    overflow: hidden; /* Hide any overflow */
-}
+    .intro-text h1 {
+        font-size: 1.2rem !important; /* Set font size */
+    }
 
-.top-lattice-image {
-    padding-top: 10px;
-    padding-bottom: 0px;
-    width: 100%;
-    height: auto;
-    filter: invert(1); /* Invert the colors */
-    clip-path: inset(0 0 0 5%); /* Crop 15% off the left side */
-    transform: translateY(-10px) scale(1.5) scaleX(-1); /* Shift the image up by 10px */
-    margin-left: -5%; /* Align the left-most edge of the image with the left side of the bottom wrapper */
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.0) 100%);
-}
+    .intro-text p {
+        font-size: 1.5vw; /* Adjust font size */
+    }
 
-.top-bottom-lattice-image {
-    padding-top: 10px;
-    padding-bottom: 0px;
-    width: 100%;
-    height: auto;
-    filter: invert(1); /* Invert the colors */
-    clip-path: inset(0 0 0 5%); /* Crop 15% off the left side */
-    transform: translateY(-10px) scale(1.5) scaleX(1); /* Shift the image up by 10px */
-    margin-left: -5%; /* Align the left-most edge of the image with the left side of the bottom wrapper */
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.0) 100%);
-}
+    .intro-text button {
+        font-size: 1.2rem !important; /* Set font size */
+    }  
 
+    .photo img {
+        max-width: 60%; /* Adjust width for smaller screens */
+    }
 
-.top-wrapper-text {
-    position: absolute;
-    top: 35px; /* Adjust as needed */
-    right: 0; /* Align text to the right */
-    transform: translateY(-50%); /* Center the text vertically */
-    text-align: right;
-    color: white; /* Adjust text color as needed */
-    z-index: 1; /* Ensure the text is above the image */
-    padding-right: 65px; /* Add some padding to the right */
-    width: auto;
-    height: auto;
-}
+    /* Center the navigation */
+    #banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #banner img {
+        display: none;
+    }
+    
+    nav {
+        display: flex;
+        font-size: 0.8em;
+    }    
+ 
+   
+    .info-box h1 {
+        font-size: 1.2rem; /* Font size for the big headings */
+    }
 
-.top-wrapper-description {
-    position: absolute;
-    bottom: 0px; /* Adjust as needed to position farther down */
-    left: 40px; /* Align text to the left */
-    text-align: left;
-    color: white; /* Adjust text color as needed */
-    z-index: 1; /* Ensure the text is above the image */
-    padding-left: 20px; /* Add some padding to the left */
-}
-
-.bottom-wrapper {
-    width: 100%;
-    max-width: 1200px; /* Match the max-width of the center column */
-    background-color:  rgba(60, 136, 168, 1);
-    display: flex;
-    justify-content: flex-start; /* Align the image to the left */
-    align-items: center; /* Center the image vertically */
-    box-sizing: border-box; /* Include padding within the width */
-    margin: 0 auto; /* Center the wrapper */
-    padding: 0px 0px 5px; /* Adjust padding as needed */
-    position: absolute; /* Position the wrapper absolutely */
-    bottom: 0; /* Align the bottom of the wrapper with the bottom of the center column */
-    border-top: 2px solid rgb(230, 119, 72); /* Add a border to separate the wrapper from the center column */
-    overflow: hidden; /* Hide any overflow */
-
-}
-
-.lattice-image {
-    padding-top: 10px;
-    padding-bottom: 0px;
-    width: 100%;
-    height: auto;
-    filter: invert(1); /* Invert the colors */
-    clip-path: inset(0 0 0 5%); /* Crop 15% off the left side */
-    transform: translateY(-10px) scale(1.5); /* Shift the image up by 10px */
-    margin-left: -5%; /* Align the left-most edge of the image with the left side of the bottom wrapper */
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.0) 100%);
-}
+    .info-box {
+        font-size: 1.2rem; /* Font size for the big headings */
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    
+}  
