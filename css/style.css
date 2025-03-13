@@ -619,6 +619,11 @@ nav a:hover, nav a.active {
     .photo img {
         max-width: 60%; /* Adjust width for smaller screens */
     }
+
+    .info-box {
+        padding-left: 8%;
+        padding-left: 8%;
+    }
     
 }
 
@@ -665,8 +670,8 @@ nav a:hover, nav a.active {
 
     .info-box {
         font-size: 1.2rem; /* Font size for the big headings */
-        padding-left: 4%;
-        padding-right: 4%;
+        padding-left: 8%;
+        padding-right: 8%;
     }
     
 }  
