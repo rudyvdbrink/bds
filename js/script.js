@@ -89,3 +89,24 @@ function closeModal() {
     });
 }
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Function to query the screen display resolution
+//     function getScreenResolution() {
+//         const screenWidth = window.screen.width;
+//         const screenHeight = window.screen.height;
+//         console.log(`Screen Resolution: ${screenWidth}x${screenHeight}`);
+//         return { width: screenWidth, height: screenHeight };
+//     }
+
+//     // Function to scale the page if the resolution is below 4K
+//     function scalePageIfNeeded() {
+//         const resolution = getScreenResolution();
+//         if (resolution.width < 3840 || resolution.height < 2160) {
+//             document.body.style.transform = 'scale(0.8)';
+//             document.body.style.transformOrigin = 'top center';
+//         }
+//     }
+
+//     // Call the function to scale the page if needed
+//     scalePageIfNeeded();
+// });
