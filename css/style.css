@@ -157,6 +157,8 @@ nav a:hover, nav a.active {
 
 .home-container {
     display: grid;
+    align-items: center; /* Center items horizontally */
+    justify-content: center;
     grid-template-rows: 80px 1fr auto;
     width: 100%;
     height: 100%;
@@ -172,7 +174,7 @@ nav a:hover, nav a.active {
     grid-template-columns: 1fr 2fr;
     align-items: start;
     gap: 1rem; /* Add space between columns in this row */
-    padding-top: 30%; /* Determine the space between the top of the container and the content */
+    padding-top: auto; /* Determine the space between the top of the container and the content */
     transform: translateX(-4%); /* Adjust the position of the content */
 } 
 
@@ -270,12 +272,13 @@ nav a:hover, nav a.active {
     height: calc(100vh - 79px); /* Adjust height to include the top banner */
     color: white;
     align-items: center; /* Center items horizontally */
+    justify-content: center;
     position: relative; /* Allow absolute positioning of the arrow-down */
 }
 
 .info-box {
-    padding-top: 15%; /* Determine the space between the top of the container and the content */
-    padding-bottom: 15%;
+    padding-top: auto; /* Determine the space between the top of the container and the content */
+    padding-bottom: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align items to the left */
