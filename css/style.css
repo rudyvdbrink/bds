@@ -257,13 +257,7 @@ nav a:hover, nav a.active {
     height: auto;
 }
 
-.logo {
-    width: 24px; /* Adjust size as needed */
-    height: auto;
-    cursor: pointer;
-    padding-bottom: 2%;
-    transform: translateX(-200%);
-}
+
 
 /* LAYOUT OF SERVICES PAGE */
 .services-page {
@@ -481,6 +475,7 @@ nav a:hover, nav a.active {
 
 .box-container{
     text-align: inherit;
+
 }
 
 .tech-stack-image { 
@@ -519,6 +514,7 @@ nav a:hover, nav a.active {
     padding: 0 8%; /* Add 8% padding on left and right */
     box-sizing: border-box; /* Ensure padding is included in the width */
     color: rgba(38, 30, 48, 1);    
+    overflow: hidden;
 }
 
 .pricing-page h1, .pricing-page p {
@@ -530,7 +526,8 @@ nav a:hover, nav a.active {
 .pricing-page h1 {
     font-size: 2.7rem; /* Adjust font size as needed */
     line-height: 1;
-    margin-bottom: 1rem; /* Add space between elements */
+    margin-bottom: 0; /* Add space between elements */
+    padding-bottom: 0
 }
 
 .pricing-page h2 {
@@ -550,10 +547,63 @@ nav a:hover, nav a.active {
     height: inherit;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Distribute space between items */
+    justify-content: space-between; 
     margin-top: 0%;
-    gap: 4rem; /* Add space between elements */
 }
+
+.pricing-text-box-container{
+    text-align: inherit;
+    padding-bottom: 20vh;
+
+}
+
+.pricing-bottom-box-container {
+    flex-shrink: 3;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-end; /* Align items to the bottom */
+    width: 100%;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    box-sizing: border-box;
+    position: relative; /* Allow absolute positioning of children */
+}
+
+.logo-container {
+    width: 15%; /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+    left: 0; /* Align to the left */
+    bottom: 0; /* Align to the bottom */
+}
+
+.logo {
+    width: 20%; /* Ensure the logo takes full width of the container */
+    cursor: pointer;
+    padding: 0;
+    padding-bottom: 8%;
+}
+
+.brain-container {
+    width: 25%; /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    bottom: 0; /* Align to the bottom */
+}
+
+.brain {
+    width: 100%; /* Ensure the brain image takes full width of the container */
+    height: auto;
+    cursor: pointer;
+    padding-bottom: 0;
+    opacity: 0.2;
+    padding-bottom: 8%;
+
+}
+
+
 
 /* LAYOUT OF THE FOOTER CONTENT */
 .footer-content {
