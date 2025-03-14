@@ -678,6 +678,21 @@ nav a:hover, nav a.active {
         padding-left: 8%;
     }
     
+    /* Center the navigation */
+    #banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #banner img {
+        display: none;
+    }
+    
+    nav {
+        display: flex;
+        font-size: 0.8em;
+    }  
 }
 
 
